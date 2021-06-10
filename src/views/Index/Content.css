@@ -1,0 +1,26 @@
+.features-icons {
+    display:flex;
+}
+
+.col-lg-4 {
+    width: 15%;
+    height: 200px;
+    border-radius: 12px;
+    top: 0;
+    transition: 0.4s;
+}
+
+
+.col-lg-4:hover {
+    transform: scale(1.06);
+    color: black;
+}
+
+.links{
+    color: black;
+}
+
+.links:hover{
+    text-decoration: none;
+    color: darkblue;
+}
