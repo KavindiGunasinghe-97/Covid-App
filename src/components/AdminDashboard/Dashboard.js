@@ -1,6 +1,6 @@
 import React from 'react';
 import {Card, Col, Row, Table} from "react-bootstrap";
-// import district from "district.jpg";
+import district from "./district.jpg";
 
 class Dashboard extends React.Component {
     render() {
@@ -105,7 +105,7 @@ class Dashboard extends React.Component {
                                 <Table responsive hover>
                                     <tbody>
                                     <tr className="overall-status">
-                                        <td><img className="rounded-circle" style={{width: '65px'}}  alt="activity-user"/></td>
+                                        <td><img className="rounded-circle" style={{width: '65px'}} src={district} alt="activity-user"/></td>
                                         <td>
                                             <h6 className="mb-1">District Vaccination Status</h6>
                                             <p className="m-0">View overall details in vaccination district wise</p>
@@ -113,7 +113,7 @@ class Dashboard extends React.Component {
                                         <td><a className="label theme-bg2 text-white f-15">View More Details</a><a  className="label theme-bg text-white 18">Print Report     <i className="feather icon-printer f-15 text-c-black"/></a></td>
                                     </tr>
                                     <tr className="overall-status">
-                                        <td><img className="rounded-circle" style={{width: '65px'}}  alt="activity-user"/></td>
+                                        <td><img className="rounded-circle" style={{width: '65px'}} src={district} alt="activity-user"/></td>
                                         <td>
                                             <h6 className="mb-1">Divisional Vaccination Status</h6>
                                             <p className="m-0">View overall details in vaccination Divisional wise</p>
@@ -121,7 +121,7 @@ class Dashboard extends React.Component {
                                         <td><a  className="label theme-bg2 text-white f-15">View More Details</a><a  className="label theme-bg text-white 18">Print Report     <i className="feather icon-printer f-15 text-c-black"/></a></td>
                                     </tr>
                                     <tr className="overall-status">
-                                        <td><img className="rounded-circle" style={{width: '65px'}}  alt="activity-user"/></td>
+                                        <td><img className="rounded-circle" style={{width: '65px'}} src={district} alt="activity-user"/></td>
                                         <td>
                                             <h6 className="mb-1">Grama Niladhari Vaccination Status</h6>
                                             <p className="m-0">View overall details in vaccination Grama Niladhari wise</p>

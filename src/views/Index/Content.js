@@ -15,7 +15,7 @@ function Content() {
                             Countries are beginning to deploy COVID-19 vaccines, bringing new hope to the fight against the global pandemic. WHO, UNICEF, Gavi and many other partners are working together to support countries in preparing for COVID-19 vaccine introduction. With careful planning, countries can ensure infrastructure is in place and the technical support available to safely deliver COVID-19 vaccines.
                     </h6>
                         <br />
-                        <h6><a className="btn btn-dark start start-two" href="#">Get Started <FontAwesomeIcon icon="arrow-right"/></a></h6>
+                        <h6><a className="btn btn-dark start start-two" href="/user">Get Started <FontAwesomeIcon icon="arrow-right"/></a></h6>
                     </div>
                     <div className="col-sm-9 showcase-img">
                     </div>

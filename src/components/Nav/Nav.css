@@ -49,6 +49,7 @@
 
 .start:hover {
     color: white;
+    transition-duration: 350ms;
 }
 
 .brand {
@@ -67,15 +68,6 @@
     font-size: 60px !important;
     font-weight: bold;
     color: #372F7F;
-}
-
-.showcase-img {
-    background-image: url('../images/Covid (2).jpg');
-    background-position: right ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 650px;
 }
 
 .circle {}
@@ -101,7 +93,6 @@
     color: white;
     margin-left: 0;
     font-weight: 600;
-    transition-duration: 350ms;
 }
 
 .det-ails {

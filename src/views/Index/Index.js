@@ -8,7 +8,7 @@ class Index extends Component {
     render() {
         return (
             <div class="main-container">
-                <Header />
+                {/*<Header />*/}
                 <Content />
                 <Footer />
             </div>
