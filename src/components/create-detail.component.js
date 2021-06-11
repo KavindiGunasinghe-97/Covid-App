@@ -364,25 +364,25 @@ export default class CreateDetail extends Component {
 
                                 <div className="form-group">
                                     <label>Nearest Vaccination Centers: </label>
-                                    {/*<select  multi joinValues*/}
-                                    {/*    ref="vNearest"*/}
-                                    {/*        required*/}
-                                    {/*        className="form-control"*/}
-                                    {/*        value={this.state.nearest}*/}
-                                    {/*        onChange={this.onChangeNearest}>*/}
-                                    {/*    <option selected>Select 3 nearest vaccination centers</option>*/}
-                                    {/*    <option value="1">Akmeemana</option>*/}
-                                    {/*    <option value="2">Galle</option>*/}
-                                    {/*    <option value="3">Matara</option>*/}
-                                    {/*</select>*/}
-                                    <DropdownMultiselect
+                                    <select  multi joinValues
                                         ref="vNearest"
-                                        required
-                                        value={this.state.nearest}
-                                        onChange={this.onChangeNearest}
-                                        options={["Akmeemana", "Galle", "Matara", "Walahanduwa", "Nuwara", "Habaraduwa"]}
+                                            required
+                                            className="form-control"
+                                            value={this.state.nearest}
+                                            onChange={this.onChangeNearest}>
+                                        <option selected>Select 3 nearest vaccination centers</option>
+                                        <option value="1">Akmeemana</option>
+                                        <option value="2">Galle</option>
+                                        <option value="3">Matara</option>
+                                    </select>
+                                    {/*<DropdownMultiselect*/}
+                                    {/*    ref="vNearest"*/}
+                                    {/*    required*/}
+                                    {/*    value={this.state.nearest}*/}
+                                    {/*    onChange={this.onChangeNearest}*/}
+                                    {/*    options={["Akmeemana", "Galle", "Matara", "Walahanduwa", "Nuwara", "Habaraduwa"]}*/}
 
-                                    />
+                                    {/*/>*/}
                                     {/*<select multiple onChange={this.handleChange.bind(this)}>*/}
                                     {/*    {*/}
                                     {/*        this.state.nearest.map(item => (*/}
