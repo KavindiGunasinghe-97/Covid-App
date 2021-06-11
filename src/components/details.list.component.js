@@ -4,6 +4,7 @@ import axios from 'axios';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Row, Col, Card, Form, Button, InputGroup, FormControl, DropdownButton, Dropdown,Table} from 'react-bootstrap';
+import './FormStyles/details.list.component.css';
 toast.configure()
 
 // const notify2 = ()=>{
@@ -28,7 +29,7 @@ const Detail = props => (
 
 
         <td>
-            <Link to={"/edit/"+props.detail._id}>edit</Link> | <a href="#" onClick={() => { props.deleteDetail(props.detail._id) }}>delete</a>
+            <Link to={"/edit/"+props.detail._id} className="icons"><i className="icon-pencil m-auto text-primary icon-ails" ></i></Link> | <a className="icons" href="#" onClick={() => { props.deleteDetail(props.detail._id) }}><i className="icon icon-trash m-auto text-primary icon-ails"></i></a>
         </td>
     </tr>
 )
@@ -69,44 +70,44 @@ export default class DetailsList extends Component {
 
     render() {
         return (
+            <div className="form-page3">
+                <Row>
+                    <Col>
+                        <Card className="form3">
+                            <Card.Header className="title-card3">
+                                <Card.Title as="h5" className="title3">Submitted Details</Card.Title>
+                            </Card.Header >
+                            <Card.Body>
+                                <Table responsive className="table-hover">
+                                    <thead class="thead-light">
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Full Name</th>
+                                        <th>NIC</th>
+                                        <th>Age</th>
+                                        <th>Vaccine Type</th>
+                                        <th>Vaccine Dosage</th>
+                                        <th>Mobile Number</th>
+                                        <th>District</th>
+                                        <th>Division</th>
+                                        <th>Grama Niladhari</th>
+                                        <th>Nearest Location</th>
+                                        <th>Actions</th>
 
-            <Row>
-                <Col>
-                    <Card>
-                        <Card.Header>
-                            <Card.Title as="h5">Submitted Details</Card.Title>
 
-                        </Card.Header>
-                        <Card.Body>
-                            <Table responsive>
-                                <thead>
-                                <tr>
-                                    <th>Username</th>
-                                    <th>Full Name</th>
-                                    <th>NIC</th>
-                                    <th>Age</th>
-                                    <th>Vaccine Type</th>
-                                    <th>Vaccine Dosage</th>
-                                    <th>Mobile Number</th>
-                                    <th>District</th>
-                                    <th>Division</th>
-                                    <th>Grama Niladhari</th>
-                                    <th>Nearest Location</th>
-                                    <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    { this.detailList() }
 
+                                    </tbody>
+                                </Table>
+                            </Card.Body>
+                        </Card>
 
-                                </tr>
-                                </thead>
-                                <tbody>
-                                { this.detailList() }
-
-                                </tbody>
-                            </Table>
-                        </Card.Body>
-                    </Card>
-
-                </Col>
-            </Row>
+                    </Col>
+                </Row>
+            </div>
 
         );
     }

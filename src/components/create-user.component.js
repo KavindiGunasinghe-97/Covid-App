@@ -3,6 +3,7 @@ import axios from 'axios';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Row, Col, Card, Form, Button, InputGroup, FormControl, DropdownButton, Dropdown} from 'react-bootstrap';
+import './FormStyles/create-user.css'
 
 toast.configure()
 
@@ -51,39 +52,40 @@ export default class CreateUsers extends Component {
 
     render() {
         return (
-            <Row>
-                <Col>
-                    <Card>
-                        <Card.Header>
-                            <Card.Title as="h5">Create New User</Card.Title>
-                        </Card.Header>
-                        <Card.Body>
-                            <div>
-                                <form onSubmit={this.onSubmit}>
-                                    <div className="form-group">
-                                        <label>Username: </label>
-                                        <input  type="text"
-                                                placeholder="Enter your nic number"
-                                                required
-                                                className="form-control"
-                                                value={this.state.username}
-                                                onChange={this.onChangeUsername}
-                                        />
-                                    </div>
-                                    <br></br>
-                                    <div className="form-group">
-                                        <input  onClick={notify} type="submit" value="Create User" className="btn btn-primary" />
-                                    </div>
-                                    {/*{ this.state.errorMessage &&*/}
-                                    {/*<h5 className="error"> { this.state.errorMessage } </h5> }*/}
-                                    <br></br>
-                                </form>
-                            </div>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-
+            <div className="form-page2">
+                <Row>
+                    <Col>
+                        <Card className="form2">
+                            <Card.Header className="title-card2">
+                                <Card.Title as="h5" className="title2">Create New User</Card.Title>
+                            </Card.Header>
+                            <Card.Body className="form-start2">
+                                <div>
+                                    <form onSubmit={this.onSubmit}>
+                                        <div className="form-group2">
+                                            <label>Username: </label>
+                                            <input  type="text"
+                                                    placeholder="Enter your nic number"
+                                                    required
+                                                    className="form-control"
+                                                    value={this.state.username}
+                                                    onChange={this.onChangeUsername}
+                                            />
+                                        </div>
+                                        <br></br>
+                                        <div className="col-md-12 text-center">
+                                            <input  onClick={notify} type="submit" value="Create User" className="btn btn-outline-dark btn-light start"/>
+                                        </div>
+                                        {/*{ this.state.errorMessage &&*/}
+                                        {/*<h5 className="error"> { this.state.errorMessage } </h5> }*/}
+                                        <br></br>
+                                    </form>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </div>
         )
     }
 }

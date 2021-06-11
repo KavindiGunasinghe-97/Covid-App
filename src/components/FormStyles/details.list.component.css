@@ -1,0 +1,63 @@
+.form-page3{
+    padding: 50px;
+    background-image: url("AnnularEclipse_ROW5696782491_1920x1080.jpg"); /* The image used */
+    background-color: #cccccc;/* Do not repeat the image */
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+.form3{
+    /*background-color: white;*/
+    background: white;
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.9;
+    border-radius: 50px;
+}
+
+.title-card3{
+    opacity: 0.8;
+}
+
+.title3{
+    color: black;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sub-header3{
+    color: grey;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+tr:hover {
+    color: #34ce57;
+}
+
+.icon-ails{
+    color: black;
+    text-decoration: none;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.icon-ails:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.icons{
+    color: black;
+    text-decoration: none;
+}
+
+.icons:hover{
+    color: white;
+    text-decoration: none;
+}

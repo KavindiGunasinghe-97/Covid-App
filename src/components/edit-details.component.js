@@ -3,6 +3,7 @@ import axios from 'axios';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Row, Col, Card, Form, Button, InputGroup, FormControl, DropdownButton, Dropdown} from 'react-bootstrap';
+import './FormStyles/edit-details.component.css'
 
 toast.configure()
 
@@ -190,200 +191,200 @@ export default class EditDetail extends Component {
     render() {
 
         return (
+            <div className="form-page4">
+                <Row>
+                    <Col>
+                        <Card className="form4">
+                            <Card.Header className="title-card4">
+                                <Card.Title className="title4" as="h3">Covid-19 Vaccine Registration Form</Card.Title>
+                            </Card.Header>
+                            <Card.Body className="form-start4">
+                                <br/>
+                                <h4 className="sub-header4">Update Your Details</h4>
+                                <br/>
+                                <Form onSubmit={this.onSubmit}>
+                                    <div className="form-group">
+                                        <label>Username: </label>
+                                        <select ref="userInput"
+                                                required
+                                                className="form-control"
+                                                value={this.state.username}
+                                                onChange={this.onChangeUsername}>
 
-            <Row>
-                <Col>
-                    <Card>
-                        <Card.Header>
-                            <Card.Title as="h5">Covid-19 Vaccine Registration Form</Card.Title>
-                        </Card.Header>
-                        <Card.Body>
+                                            {
+                                                this.state.users.map(function(user) {
+                                                    return <option
+                                                        key={user}
+                                                        value={user}>{user}
+                                                    </option>;
+                                                })
+                                            }
+                                        </select>
+                                    </div>
 
-                            <h5>Update Your Details</h5>
-                            <hr/>
-                            <Form onSubmit={this.onSubmit}>
-                                <div className="form-group">
-                                    <label>Username: </label>
-                                    <select ref="userInput"
-                                            required
+                                    <div className="form-group">
+                                        <label>Full Name: </label>
+                                        <input  type="text"
+                                                required
+                                                className="form-control"
+                                                value={this.state.name}
+                                                onChange={this.onChangeName}
+                                        />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label>NIC: </label>
+                                        <input
+                                            type="text"
                                             className="form-control"
-                                            value={this.state.username}
-                                            onChange={this.onChangeUsername}>
+                                            value={this.state.nic}
+                                            onChange={this.onChangeNIC}
+                                        />
+                                    </div>
 
-                                        {
-                                            this.state.users.map(function(user) {
-                                                return <option
-                                                    key={user}
-                                                    value={user}>{user}
-                                                </option>;
-                                            })
-                                        }
-                                    </select>
-                                </div>
+                                    <div className="form-group">
+                                        <label>Age Range: </label>
+                                        <select ref="ageRange"
+                                                required
+                                                className="form-control"
+                                                value={this.state.age}
+                                                onChange={this.onChangeAge}>
+                                            <option selected>Select Age Range</option>
+                                            <option value="1">12 - 30 Years</option>
+                                            <option value="2">31 - 60 Years</option>
+                                            <option value="3">60 + Years</option>
+                                        </select>
+                                    </div>
 
-                                <div className="form-group">
-                                    <label>Full Name: </label>
-                                    <input  type="text"
-                                            required
+                                    <div className="form-group">
+                                        <label>Vaccine Type: </label>
+                                        <select ref="vType"
+                                                required
+                                                className="form-control"
+                                                value={this.state.vtype}
+                                                onChange={this.onChangeType}>
+                                            <option selected>Select Vaccine Type</option>
+                                            <option value="1">None</option>
+                                            <option value="2">Astrazenecz</option>
+                                            <option value="3">Sinopharm</option>
+                                            <option value="4">Sputnik</option>
+                                            <option value="5">Pfizer</option>
+
+                                        </select>
+                                    </div>
+
+
+                                    <div className="form-group">
+                                        <label>Vaccine Dosage: </label>
+                                        <select ref="vDosage"
+                                                required
+                                                className="form-control"
+                                                value={this.state.vdosage}
+                                                onChange={this.onChangeDosage}>
+                                            <option selected>Select Vaccine Dosage</option>
+                                            <option value="1">None</option>
+                                            <option value="2">1</option>
+                                            <option value="3">2</option>
+                                        </select>
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label>Phone Number: </label>
+                                        <input
+                                            type="text"
                                             className="form-control"
-                                            value={this.state.name}
-                                            onChange={this.onChangeName}
-                                    />
-                                </div>
+                                            value={this.state.pnumber}
+                                            onChange={this.onChangePnumber}
+                                        />
+                                    </div>
 
-                                <div className="form-group">
-                                    <label>NIC: </label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        value={this.state.nic}
-                                        onChange={this.onChangeNIC}
-                                    />
-                                </div>
+                                    <div className="form-group">
+                                        <label>District: </label>
+                                        <select ref="vDistrict"
+                                            // id="objectType"
+                                                required
+                                                className="form-control"
+                                                value={this.state.district}
+                                                onChange={this.onChangeDistrict}>
+                                            <option selected>Select Your District</option>
+                                            <option value="2">Galle</option>
+                                            <option value="3">Matara</option>
+                                            <option value="4">Hambantota</option>
+                                            <option value="5">Colombo</option>
+                                            <option value="6">Gampaha</option>
+                                            <option value="7">Kaluthara</option>
+                                            <option value="8">Mahanuwara</option>
+                                            <option value="9">Matale</option>
+                                            <option value="10">Jaffna</option>
+                                            <option value="11">Nuwaraeliya</option>
+                                        </select>
+                                    </div>
 
-                                <div className="form-group">
-                                    <label>Age Range: </label>
-                                    <select ref="ageRange"
-                                            required
-                                            className="form-control"
-                                            value={this.state.age}
-                                            onChange={this.onChangeAge}>
-                                        <option selected>Select Age Range</option>
-                                        <option value="1">12 - 30 Years</option>
-                                        <option value="2">31 - 60 Years</option>
-                                        <option value="3">60 + Years</option>
-                                    </select>
-                                </div>
+                                    <div className="form-group">
+                                        <label>Division: </label>
+                                        <select ref="vDistrict"
+                                            // id="objectSubtype"
+                                                required
+                                                className="form-control"
+                                                value={this.state.division}
+                                                onChange={this.onChangeDivision}>
+                                            <option selected>Select Your Division</option>
+                                            {
+                                                this.state.divi.map((val) => {
+                                                    return <option value={val}>{val}</option>
+                                                })
+                                            }
+                                            {/*<option value="1">Akmeemana</option>*/}
+                                            {/*<option value="2">Galle</option>*/}
+                                            {/*<option value="3">Matara</option>*/}
+                                        </select>
+                                    </div>
 
-                                <div className="form-group">
-                                    <label>Vaccine Type: </label>
-                                    <select ref="vType"
-                                            required
-                                            className="form-control"
-                                            value={this.state.vtype}
-                                            onChange={this.onChangeType}>
-                                        <option selected>Select Vaccine Type</option>
-                                        <option value="1">None</option>
-                                        <option value="2">Astrazenecz</option>
-                                        <option value="3">Sinopharm</option>
-                                        <option value="4">Sputnik</option>
-                                        <option value="5">Pfizer</option>
+                                    <div className="form-group">
+                                        <label>Grama Niladhari: </label>
+                                        <select ref="vGrama"
+                                                required
+                                                className="form-control"
+                                                value={this.state.grama}
+                                                onChange={this.onChangeGrama}>
+                                            <option selected>Select Your Grama Niladhari</option>
 
-                                    </select>
-                                </div>
+                                            {
+                                                this.state.nila.map((val) => {
+                                                    return <option>{val}</option>
+                                                })
+                                            }
+                                        </select>
+                                    </div>
 
-
-                                <div className="form-group">
-                                    <label>Vaccine Dosage: </label>
-                                    <select ref="vDosage"
-                                            required
-                                            className="form-control"
-                                            value={this.state.vdosage}
-                                            onChange={this.onChangeDosage}>
-                                        <option selected>Select Vaccine Dosage</option>
-                                        <option value="1">None</option>
-                                        <option value="2">1</option>
-                                        <option value="3">2</option>
-                                    </select>
-                                </div>
-
-                                <div className="form-group">
-                                    <label>Phone Number: </label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        value={this.state.pnumber}
-                                        onChange={this.onChangePnumber}
-                                    />
-                                </div>
-
-                                <div className="form-group">
-                                    <label>District: </label>
-                                    <select ref="vDistrict"
-                                        // id="objectType"
-                                            required
-                                            className="form-control"
-                                            value={this.state.district}
-                                            onChange={this.onChangeDistrict}>
-                                        <option selected>Select Your District</option>
-                                        <option value="2">Galle</option>
-                                        <option value="3">Matara</option>
-                                        <option value="4">Hambantota</option>
-                                        <option value="5">Colombo</option>
-                                        <option value="6">Gampaha</option>
-                                        <option value="7">Kaluthara</option>
-                                        <option value="8">Mahanuwara</option>
-                                        <option value="9">Matale</option>
-                                        <option value="10">Jaffna</option>
-                                        <option value="11">Nuwaraeliya</option>
-                                    </select>
-                                </div>
-
-                                <div className="form-group">
-                                    <label>Division: </label>
-                                    <select ref="vDistrict"
-                                        // id="objectSubtype"
-                                            required
-                                            className="form-control"
-                                            value={this.state.division}
-                                            onChange={this.onChangeDivision}>
-                                        <option selected>Select Your Division</option>
-                                        {
-                                            this.state.divi.map((val) => {
-                                                return <option value={val}>{val}</option>
-                                            })
-                                        }
-                                        {/*<option value="1">Akmeemana</option>*/}
-                                        {/*<option value="2">Galle</option>*/}
-                                        {/*<option value="3">Matara</option>*/}
-                                    </select>
-                                </div>
-
-                                <div className="form-group">
-                                    <label>Grama Niladhari: </label>
-                                    <select ref="vGrama"
-                                            required
-                                            className="form-control"
-                                            value={this.state.grama}
-                                            onChange={this.onChangeGrama}>
-                                        <option selected>Select Your Grama Niladhari</option>
-
-                                        {
-                                            this.state.nila.map((val) => {
-                                                return <option>{val}</option>
-                                            })
-                                        }
-                                    </select>
-                                </div>
-
-                                <div className="form-group">
-                                    <label>Nearest Vaccination Centers: </label>
-                                    <select ref="vNearest"
-                                            required
-                                            className="form-control"
-                                            value={this.state.nearest}
-                                            onChange={this.onChangeNearest}>
-                                        <option selected>Select 3 nearest vaccination centers</option>
-                                        <option value="1">Akmeemana</option>
-                                        <option value="2">Galle</option>
-                                        <option value="3">Matara</option>
-                                    </select>
-                                </div>
+                                    <div className="form-group">
+                                        <label>Nearest Vaccination Centers: </label>
+                                        <select ref="vNearest"
+                                                required
+                                                className="form-control"
+                                                value={this.state.nearest}
+                                                onChange={this.onChangeNearest}>
+                                            <option selected>Select 3 nearest vaccination centers</option>
+                                            <option value="1">Akmeemana</option>
+                                            <option value="2">Galle</option>
+                                            <option value="3">Matara</option>
+                                        </select>
+                                    </div>
+                                    <br/>
 
 
+                                    <div className="col-md-12 text-center">
+                                        <input onClick={notify} type="submit" value="Update Details Log" className="btn btn-outline-dark start"/>
+                                    </div>
+                                    <br/><br/>
+                                </Form>
 
-                                <div className="form-group">
-                                    <input onClick={notify} type="submit" value="Update Details Log" className="btn btn-primary" />
-                                </div>
 
-                            </Form>
-
-
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </div>
         );
     }
 }

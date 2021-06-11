@@ -3,6 +3,7 @@ import './Nav.css';
 
 function Nav() {
     return (
+        <div className="navigation-bar">
         <nav className="navbar navbar-expand-lg navbar-light bg-light static-top header-a">
             <div className="container nav-container">
                 <a className="navbar-brand brand" href="/"><h3><b>Vaccination Center</b></h3></a>
@@ -28,6 +29,7 @@ function Nav() {
 
             </div>
         </nav>
+        </div>
     );
 }
 
